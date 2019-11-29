@@ -1,2 +1,2 @@
 # Package-Manager
-Tool for managing the automated creation of a certain file package format, relevant to my position at time of creation.
+A tool for managing the automated creation of a deployment package, in a particular format, relevant to my position at time of creation. The tool eradicates a substantial amount of the manual work that was previously put into making the packages, and by doing so, reduces the chance of errors in the final output. 
