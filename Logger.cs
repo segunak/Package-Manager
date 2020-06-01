@@ -3,8 +3,7 @@ using System.IO;
 using System.Reflection;
 
 /// <summary>
-/// There is nothing interesting here. It is a Logging class. Singleton implementation. The instance is returned using an
-/// an auto property. 
+/// There is nothing interesting here. It is a Logging class. Singleton implementation. 
 /// </summary>
 
 namespace PackageManager

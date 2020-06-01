@@ -3,9 +3,7 @@ using System.IO;
 using System.Linq;
 
 /// <summary>
-/// This class contains methods that build, line by line, the various files that are a part of a package. Because we're building each 
-/// separate file line by line, some of these methods are long, with limited utility for extracting out to a separate method, since things 
-/// must stay in line.
+/// This class contains methods that build, line by line, the various files that are a part of a package. 
 /// </summary>
 
 namespace PackageManager
@@ -80,7 +78,7 @@ namespace PackageManager
                     if (PackageData.HasRollback)
                     {
                         sw.WriteLine();
-                        sw.WriteLine("Rollback instructions are provided in the rollback folder");
+                        sw.WriteLine("Rollback instructions are provided in the `rollback` folder.");
                     }
                 }
                 Logger.Log("Root readme.md file successfully built");
@@ -340,7 +338,7 @@ namespace PackageManager
                     }
                     else
                     {
-                        sw.Write("`" + Path.GetFileName(rollbackFiles[0]) + "` "  + namingSyntax + " for installation to the Ingenico iSC350 CDU via the NCRDiag utility");
+                        sw.Write("`" + Path.GetFileName(rollbackFiles[0]) + "` " + namingSyntax + " for installation to the Ingenico iSC350 CDU via the NCRDiag utility");
                         sw.WriteLine();
                         sw.WriteLine();
                     }
@@ -371,6 +369,7 @@ namespace PackageManager
                     sw.WriteLine();
                     sw.WriteLine("Upon booting, the machine will install the previous version of the {0} to the CDU as part of the NCRDiag startup step.", namingSyntax);
                 }
+
                 Logger.Log("Rollback readme.md file successfully built");
             }
         }

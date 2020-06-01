@@ -1,24 +1,21 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 using System.Management.Automation;
 using System.Collections.ObjectModel;
-using Newtonsoft.Json;
 
 /// <summary>
-/// Program to automate a portion of the EDM/SCCM package creation process. It creates the relevant files and scripts then places 
-/// them in the correct folders. Due to the very specific nature of EDM/SCCM packages, it remains mandatory that one open each readme.md 
-/// and read through it to make sure all relevant details are present.  
+/// Program to automate a portion of the SCCM package creation process. It creates the relevant files and scripts then places 
+/// them in the correct folders, based on input data passed in by the user. 
 /// </summary>
-
-// TODO: Write a test class
 
 namespace PackageManager
 {
     internal static class Program
     {
         private static Logger Logger = Logger.LoggerInstance;
-        private static readonly string CurrentFolder = Directory.GetCurrentDirectory(); 
+        private static readonly string CurrentFolder = Directory.GetCurrentDirectory();
 
         static void Main(string[] args)
         {
@@ -66,7 +63,7 @@ namespace PackageManager
             CleanExecutableDirectory(packageData);
 
             Logger.Log("Package Manager End");
-            Logger.Dispose(); 
+            Logger.Dispose();
         }
 
         /// <summary>
